@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVERY</title>
+</head>
+<body>
+    <!-- EVERY RETURNS TRUE IF ALL THE ELEMENTS IN THAT ARRAY MEETS THE CONDITION-->
+    <script>
+         prices = [1000, 2000, 3000, 4000, 5000]
+            const check = prices.every((num) => {
+                if (num <= 4500) {
+                    return num
+                }
+            })
+            // some( returns true when only one elemnt meets the condition
+            document.write(`${check}<br>`)
+             const test = prices.some((num) => {
+                    if (num <= 1000) {
+                        return num
+                    }
+                })
+            document.write(`${test}`)
+    </script>
+</body>
+</html>

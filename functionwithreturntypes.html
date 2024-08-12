@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function with return types</title>
+</head>
+<body>
+    <script>
+//  define function
+const demoFunction=(a,b)=>{
+    let sub = b-a
+    return sub//return is an ending code after which the function stops executing, so return is always written at the end of the function
+    //you can also use return to perform actions such as return b-a rather than return sub
+}
+// call function
+const result = demoFunction(10,20)//the value is returned to the place where the function is called
+document.write(`Result: ${result}`)
+    </script>
+</body>
+</html>

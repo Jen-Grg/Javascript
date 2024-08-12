@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nested if else</title>
+</head>
+<body>
+    <script>
+        const user1 = 'admin'
+        const user2 ='user'
+        const user = prompt('Enter a username')
+        if(user == user1){
+            alert('Welcome to admin dashboard')
+            const attendance = prompt("Enter attendance: ")
+            if(attendance=='Full'){
+                document.write(`Staff is fully present.`)
+            }
+            else if (attendance=='Half'){
+                document.write(`Half of the staff are present`)
+            }
+            else if(attendance =='Morning'){
+                document.write(`Morning only`)
+            }
+            else if (attendance == 'Empty'){
+                document.write(`Absent`)
+            }
+            else{
+                document.write(`Invalid`)
+            }
+        }
+        else if (user == user2){
+            alert("Welcome to user dashboard")
+        }
+        else{
+            document.write("Invalid username")
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function add(a,b){
+            document.write(`The addition is: ${a + b}<br>`);
+        }
+        add(10,20)
+        const addition=(a,b)=>(document.write(`The addition of ${a} and ${b} is: ${a + b}<br>`))
+        addition(5,6)
+        addition(7, 8)
+        addition(53, 26)//the value passed when a function is called, it is passed through parameters and b
+        const area=(l,b)=>{
+            document.write(`The area calculated with length as ${l} and breadth as ${b} is ${l*b}<br>`)
+        }
+        area(Number(prompt("Enter length: ")), Number(prompt("Enter breadth: ")))
+        const volume=(l,b,h)=>{
+             document.write(`The volume calculated with length as ${l}, breadth as ${b} and height as ${h} is ${l * b * h}<br>`)
+        }
+        volume(4,5,6)
+        volume(1,2,3)
+        volume(Number(prompt("Enter length: ")), Number(prompt("Enter breadth: ")), Number(prompt("Enter height: ")))
+    </script>
+</body>
+</html>

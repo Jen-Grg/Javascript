@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM</title>
+<style>
+    #welcome-msg{
+        text-align: center;
+    }
+    #pin-number{
+        text-align: center;
+    }
+    #input{
+       margin-left: 44%;
+    }
+    #submit-btn{
+        padding: 2px;
+        width: 65px;
+    }
+</style>
+</head>
+<body>
+    <h1 id="welcome-msg">
+        Welcome to the ATM
+    </h1>
+    <h4 id="pin-number">
+        Enter your pin number: 
+    </h4>
+    <input id="input" type="text" placeholder="Enter pin"/>
+    <button id="submit-btn" onclick="demo">Enter</button>
+    <script>
+        // --------------------Nested ifelse---------------------------------
+        //  document.addEventListener('click', function demo() {
+        //         const pin = 8060
+        //         const pinInput = document.getElementById('input')
+        //         const a = pinInput.value
+                // if (pin == a) {
+                //     alert("Welcome user")
+                //     alert(`Please choose an option \n Withdraw Money \n FastCash \n Current Balance \n Display `)
+                //     option()
+                // }
+        //         else {
+        //             alert("Invalid Pin Number")
+        //         }
+        //     })
+        // const option = () =>{
+        //     let b = prompt("Enter your option: ")
+        //     let amount = 10000
+        //     if (b == 'Withdraw') {
+        //         let max = 9000
+        //         let c = parseInt(prompt("Enter withdrawal amount"))
+        //         if (c <= max) {
+        //            alert(`Rs ${c} has been withdrawn`)
+        //             amount -= c
+        //             user()
+        //             return amount
+        //         }
+        //         else {
+        //             alert(`Money cannot be withdrawn`)
+        //              user()
+        //         }
+        //     }
+        //     else if(b == 'FastCash'){
+        //         alert("Enter your option to withdraw cash: 1000(a), 2000(b), 3000(c), 4000(d), 5000(e)")
+        //         let e = prompt("Enter your option(a/b/c/d/e): ")
+        //         if(e=='a'){
+        //             alert(`Rs 1000 has been withdrawn`)
+        //             amount -= 1000
+        //             user()
+        //             return amount
+        //         }
+        //         else if(e=='b'){
+        //             alert(`Rs 2000 has been withdrawn`)
+        //             amount -= 2000
+        //             user()
+        //             return amount
+        //         }
+        //          else if (e == 'c') {
+        //             alert(`Rs 3000 has been withdrawn`)
+        //             amount -= 3000
+        //             user()
+        //             return amount
+        //         }
+        //          else if (e == 'd') {
+        //             alert(`Rs 4000 has been withdrawn`)
+        //             amount -= 4000
+        //             user()
+        //             return amount
+        //         }
+        //          else if (e == 'e') {
+        //             alert(`Rs 5000 has been withdrawn`)
+        //             amount -= 5000
+        //             user()
+        //             return amount
+        //         }
+        //         else{
+        //             alert('Invalid option')
+        //         }
+        //     }
+        //     else if (b == 'Deposit') {
+        //         let d = parseInt(prompt("Enter deposited amount"))
+        //         alert(`Rs ${d} has been withdrawn`)
+        //         amount += d
+        //         user()
+        //         return amount
+        //     }
+        //     else if (b == 'Display') {
+        //         alert(`${amount} is stored in the card`)
+        //         user()
+        //     }
+        //     else{
+        //         alert('Invalid choice')
+        //     }
+        // }
+        // const user =()=>{
+        //     let ask = prompt('Would you like to continue? (Y/N): ')
+        //     if( ask == 'Y'){
+        //         option()
+        //     }
+        //     else if (ask == 'N') {
+        //         alert("Thank you")
+        //     }
+        //     else{
+        //         alert("Invalid")
+        //     }
+        // }
+       
+        // ----------------------------Nested Switch case-----------------------------------
+        document.addEventListener('click', function demo() {
+                    const pin = 1111
+                    const pinInput = document.getElementById('input')
+                    const a = pinInput.value
+                    switch(a){
+                        case pin: 
+                                alert("Welcome user")
+                                alert(`Please choose an option \n Withdraw Money \n FastCash \n Current Balance \n Display `)
+                                option()
+                                break
+                        default:
+                            alert("Invalid Pin Number")
+                            break
+                    }
+        })
+         const option = () => {
+                let b = prompt("Enter your option: ")
+                let amount = 10000
+                switch(b){
+                    case 'Withdraw':
+                         let max = 9000
+                         let c = parseInt(prompt("Enter withdrawal amount"))
+                         switch (c) {
+                            case c<=max && c > 0:
+                                alert(`Rs ${c} has been withdrawn`)
+                                user()
+                                break
+                            case c>max:
+                                 alert(`The amount is too large to be withdrawn`)
+                                 user()
+                                 break
+                            default:
+                                 alert(`Invalid withdraw`)
+                                 user()
+                                 break
+                        }
+                }
+               
+            //     else if (b == 'FastCash') {
+            //         alert("Enter your option to withdraw cash: 1000(a), 2000(b), 3000(c), 4000(d), 5000(e)")
+            //         let e = prompt("Enter your option(a/b/c/d/e): ")
+            //         if (e == 'a') {
+            //             alert(`Rs 1000 has been withdrawn`)
+            //             amount -= 1000
+            //             user()
+            //             return amount
+            //         }
+            //         else if (e == 'b') {
+            //             alert(`Rs 2000 has been withdrawn`)
+            //             amount -= 2000
+            //             user()
+            //             return amount
+            //         }
+            //         else if (e == 'c') {
+            //             alert(`Rs 3000 has been withdrawn`)
+            //             amount -= 3000
+            //             user()
+            //             return amount
+            //         }
+            //         else if (e == 'd') {
+            //             alert(`Rs 4000 has been withdrawn`)
+            //             amount -= 4000
+            //             user()
+            //             return amount
+            //         }
+            //         else if (e == 'e') {
+            //             alert(`Rs 5000 has been withdrawn`)
+            //             amount -= 5000
+            //             user()
+            //             return amount
+            //         }
+            //         else {
+            //             alert('Invalid option')
+            //         }
+            //     }
+            //     else if (b == 'Deposit') {
+            //         let d = parseInt(prompt("Enter deposited amount"))
+            //         alert(`Rs ${d} has been withdrawn`)
+            //         amount += d
+            //         user()
+            //         return amount
+            //     }
+            //     else if (b == 'Display') {
+            //         alert(`${amount} is stored in the card`)
+            //         user()
+            //     }
+            //     else {
+            //         alert('Invalid choice')
+            //     }
+            // }
+            // const user = () => {
+            //     let ask = prompt('Would you like to continue? (Y/N): ')
+            //     if (ask == 'Y') {
+            //         option()
+            //     }
+            //     else if (ask == 'N') {
+            //         alert("Thank you")
+            //     }
+            //     else {
+            //         alert("Invalid")
+            //     }
+            }
+    </script>
+</body>
+</html>

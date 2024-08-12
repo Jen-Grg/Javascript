@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reduce</title>
+</head>
+<body>
+    <script>
+        const prices = [1,2,3,4,5]
+        const result = prices.reduce((total,  value)=>{
+            return total +value
+        },0)
+        // 0 is an initial state assigned to total at first, value is assigned according to array 
+        document.write(`${result}`)
+    </script>
+</body>
+</html>

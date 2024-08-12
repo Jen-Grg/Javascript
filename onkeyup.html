@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On key up</title>
+</head>
+<body>
+    <input type="password" name="pwd" id="pwd" onkeyup="demo">
+    <button id="btn" onclick="demo1" ondblclick="pre">Show</button>
+    <h2 id="result" class="demo2"></h2>
+    <h3 class="demo2"></h3>
+    <h4 class="demo2"></h4>
+    <script>
+        //Long cut process
+            const pwdInput = document.querySelector('#pwd')
+    //         const demo=()=>{
+    //             document.getElementById('result').innerHTML = pwdInput.value//.value returns the value attributed to textfield in this case the password field value is returned
+    //         }
+    //         document.addEventListener('keyup', demo)//eventlistener needs the keyword after on of examples like onclick ondblclick etc and in this paramter a function is called inside as well
+    // document.addEventListener('keyup', function(){
+    //     document.getElementById('result').innerHTML = pwdInput.value
+    // })//using an anonymous function 
+    //using anonymous arrow function
+    //  document.addEventListener('keyup', ()=> {
+    //         document.getElementById('result').innerHTML = pwdInput.value
+    //     })
+    document.addEventListener('click', function demo1(){
+        //dom by id
+document.getElementById('result').innerHTML = pwdInput.value
+document.getElementById('result').style.display = 'block';
+document.getElementById('btn').innerHTML = 'Hide';
+//dom by class name
+// document.getElementsByClassName('demo2')[1].innerHTML = pwdInput.value
+// document.getElementsByClassName('demo2')[2].innerHTML = pwdInput.value
+    })
+    document.addEventListener('dblclick', function pre(){
+        document.getElementById('result').style.display = 'none';
+        document.getElementById('btn').innerHTML = 'Show';
+        // document.getElementsByClassName('demo2')[1].style.display = 'none';
+        // document.getElementsByClassName('demo2')[2].style.display = 'none';
+    })
+    </script>
+</body>
+</html>

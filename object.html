@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <style>
+        table,
+        tr,
+        th,td {
+            border: 2px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Data in keyvalue pair is object -->
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>
+                address
+            </th>
+            <th>age</th>
+        </tr>
+        <tr>
+            <td id="info1" class="demo"></td>
+            <td id="info2" class="demo"></td>
+            <td id="info3" class="demo"></td>
+        </tr>
+    </table>
+    <script>
+        const student = { info: { name: 'Jen', phnum: 999 }, address: 'Naxal', age: 16 }
+        // document.write(`${student.info.phnum} &nbsp; ${student.address}`)//&nbsp; is none breaking space
+        // document.getElementById('info1').innerHTML = `${student.info.name}`
+        // document.getElementById('info2').innerHTML = `${student.address}`
+        document.getElementsByClassName('demo')[0].innerHTML = `${student.info.name}`
+        document.getElementsByClassName('demo')[1].innerHTML = `${student.address}`
+        document.getElementsByClassName('demo')[2].innerHTML = `${student.age}`
+    </script>
+</body>
+
+</html>

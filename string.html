@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String methods</title>
+</head>
+<body>
+    <script>
+        const text = 'We are studying javascript programming language and javascript is used for interactive web pages'//space is counted as character as well
+        document.write(`${text}<br>`)
+        document.write(`${text[1]}<br>`)
+        document.write(`${text.length}<br>`)//length gives the number of character present in string
+       
+        const toUpperCase =()=>{
+            document.write(`${text.toUpperCase()}<br>`)
+        }
+         const toLowerCase = () => {
+                document.write(`${text.toLowerCase()}<br>`)
+        }
+        toUpperCase()
+        toLowerCase()
+        // indexOf() guves the index of particular word, it returns only the index of the word being used at first
+        document.write(`${text.indexOf('studying')}<br>`)
+        //lastIndexOf()
+        document.write(`${text.lastIndexOf('javascript')}<br>`)
+        // search()
+        document.write(`${text.search('language')}<br>`)
+        // spilt() separates what is provided from the point, using comma
+        document.write(`${text.split(' ')}<br>`)
+        document.write(`${text.split('is')}<br>`)
+        // slice(start,end), subtstring =>certain part of string, substr(start.length),substring(start,end)
+        document.write(`${text.slice(1, 20)}<br>`)
+         document.write(`${text.substring(21, 50)}<br>`)
+          document.write(`${text.substr(5, 20)}<br>`)
+           document.write(`${text.substr(1, 20)}<br>`)
+        //    replace()
+            document.write(`${text.replace('studying', 'practicing')}<br>`)
+             //    replaceAll()
+             document.write(`${text.replaceAll('javascript', 'js')}<br>`)
+            //  includes() returns boolean value
+              document.write(`${text.includes('javascript')}<br>`)
+            //   trim()
+            const test = '             Hello World     '
+            document.write(`${test.trim()}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object destruction</title>
+</head>
+<body>
+    <script>
+        const student = {
+            name:"hari paudel",
+            address:"Naxal",
+            age: 20
+        }
+        const showStudent = ({name, address,age})=>{
+            // old way
+            // return `Student name is ${student.name}. He lives in ${student.address}`
+            return `Student name is ${name}. He lives in ${address}. He is ${age} years old<br>`
+        }
+        const show = showStudent(student)
+        document.write(`${show}`)
+        // {} is used to declare an object while [] is used to declare an array
+        const{name,address,age}= student
+        document.write(`${student.name}<br>`)
+        document.write(`${name}`)
+    </script>
+</body>
+</html>

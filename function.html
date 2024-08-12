@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+      // Function is a block of code which is used to perform specific task/operations and used for code reusability
+      function add() {
+        let a = 4;
+        let b = 3;
+        document.write(`Hello<br>`);
+        if (a > b) {
+          document.write(`Add: ${a + b}<br>`);
+        }
+      }
+      add();
+      //arrow function
+      // used for one line code
+      const hello = () => document.write(`Hello World<br>`);
+      //for multiple line of code
+      //() has parameters inside in arrow function
+      const subtract =()=>{
+        let c= 10
+        let d = 5
+        if(c>d){
+            document.write(`Subtraction: ${c-d}`)
+        }
+      }
+      hello()
+      subtract()
+    </script>
+  </body>
+</html>

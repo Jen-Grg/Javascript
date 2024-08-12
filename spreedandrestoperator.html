@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spreed and rest operator</title>
+</head>
+<body>
+    <script>
+        num = [1,2,3,4,5]
+        alpha = ['a','b','c','d','e']
+        // ... is spreed operator which joins the array
+        mix = [...num, ...alpha]
+        console.log(mix)
+        // rest operator
+
+        // const fruit =(name1, name2, name3)=>{
+        //     return `first fruit name is ${name1}`
+        // }
+        // we can use rest to access everything after the assigned arguement
+        // ... is compulsary for the rest operator, the name rest itself is just a variable name
+         const fruit = (...rest) => {
+                return `collection of fruits are ${rest}`
+            }
+        const fruits = fruit('apple','banana','coconut','mango')
+        document.write(fruits)
+    </script>
+</body>
+</html>
